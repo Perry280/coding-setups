@@ -25,7 +25,7 @@ vim.opt.clipboard = "unnamedplus"
 
 vim.g.have_nerd_font = true
 
-vim.opt.scrolloff = 5
+vim.opt.scrolloff = 10
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
@@ -38,3 +38,5 @@ vim.keymap.set("n", "<C-S>", "<cmd>wa<CR>")
 vim.keymap.set("n", "<C-Q>", "<cmd>xa<CR>")
 
 require("config.lazy")
+
+vim.cmd[[colorscheme tokyonight]]
