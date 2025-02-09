@@ -17,7 +17,7 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.cursorline = true
 
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.signcolumn = "yes:1"
@@ -39,4 +39,4 @@ vim.keymap.set("n", "<C-Q>", "<cmd>xa<CR>")
 
 require("config.lazy")
 
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd("colorscheme tokyonight")
