@@ -1,0 +1,10 @@
+[
+    {
+        "key": "ctrl+[Minus]",
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
+    {  
+        "key": "ctrl+[Equal]",
+        "command": "workbench.action.terminal.focus"
+    }
+]
