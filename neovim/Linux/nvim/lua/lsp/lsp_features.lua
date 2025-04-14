@@ -1,31 +1,41 @@
 local NAME = "lsp_features"
 
-local LspFeatures = {}
+local lsp_features = {}
 
-function LspFeatures.autocompletion(args, client)
+function lsp_features.autocompletion(args, client)
     if client ~= nil and args ~= nil and client:supports_method('textDocument/completion') then
         vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = false })
     end
 end
 
-function LspFeatures.format_on_save(args, client)
-    if client ~= nil and args ~= nil and client:supports_method('textDocument/formatting') then
+function lsp_features.format_on_save(args, client)
+    if args ~= nil and client ~= nil and client:supports_method('textDocument/formatting') then
         vim.api.nvim_create_autocmd('BufWritePre', {
             buffer = args.buf,
             callback = function()
-                vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
+                vim.lsp.buf.format({
+                    -- formatting_options = {
+                    --     tabSize = 4,
+                    --     insertSpaces = true,
+                    --     trimTrailingWhitespace = true,
+                    --     insertFinalNewLine = true,
+                    --     trimFinalNewlines = true,
+                    -- },
+                    bufnr = args.buf,
+                    id = client.id,
+                })
             end,
         })
     end
 end
 
-function LspFeatures.inlay_hints(args, client)
+function lsp_features.inlay_hints(args, client)
     if client ~= nil and args ~= nil and client:supports_method('textDocument/inlayHint') then
         vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
     end
 end
 
-function LspFeatures.highlight_words(args, client)
+function lsp_features.highlight_words(args, client)
     if client ~= nil and args ~= nil and client:supports_method('textDocument/documentHighlight') then
         local autocmd = vim.api.nvim_create_autocmd
         local augroup = vim.api.nvim_create_augroup('lsp_highlight', { clear = false })
@@ -46,7 +56,7 @@ function LspFeatures.highlight_words(args, client)
     end
 end
 
-function LspFeatures.tab_completion()
+function lsp_features.tab_completion()
     vim.opt.completeopt = { 'menu', 'menuone', 'noselect', 'noinsert' }
     vim.opt.shortmess:append('c')
 
@@ -89,4 +99,4 @@ function LspFeatures.tab_completion()
     vim.keymap.set('i', '<S-Tab>', tab_prev, { expr = true })
 end
 
-return LspFeatures
+return lsp_features
