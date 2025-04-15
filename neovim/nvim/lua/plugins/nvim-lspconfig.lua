@@ -9,11 +9,5 @@ return {
     },
     config = function()
         require("lsp.lspinit")
-
-        require("lsp.lsp_enable")({
-            "lua_ls",
-            -- "clangd",
-            "pyright"
-        })
     end
 }

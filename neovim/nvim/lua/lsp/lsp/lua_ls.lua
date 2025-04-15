@@ -24,8 +24,14 @@ require("lspconfig").lua_ls.setup({
                     "${3rd}/luv/library",
                     -- "${3rd}/busted/library",
                 }
-                -- library = vim.api.nvim_get_runtime_file("", true)
-            }
+                -- library = vim.tbl_extend(
+                --     "force",
+                --     vim.api.nvim_get_runtime_file("", true),
+                --     { "${3rd}/luv/library" }
+                -- ),
+                -- library = vim.api.nvim_get_runtime_file("", true),
+            },
+            capabilities = require("cmp_nvim_lsp").default_capabilities()
         })
     end,
     settings = { Lua = {} }

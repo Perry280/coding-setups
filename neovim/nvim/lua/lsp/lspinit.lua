@@ -22,7 +22,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         -- lsp_features.tab_completion()
 
         local opts = { buffer = args.buf };
-        keymaps(opts)
+        -- keymaps(opts)
     end,
 })
 
@@ -30,3 +30,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 --     "luals",
 --     "clangd"
 -- })
+
+require("lsp.lsp_enable")({
+    "lua_ls",
+    -- "clangd",
+    -- "pyright"
+})
