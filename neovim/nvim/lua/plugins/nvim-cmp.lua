@@ -6,7 +6,15 @@ return {
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-cmdline",
+        "folke/lazydev.nvim",
     },
+    opts = function(_, opts)
+        opts.sources = opts.sources or {}
+        table.insert(opts.sources, {
+            name = "lazydev",
+            group_index = 0, -- set group index to 0 to skip loading LuaLS completions
+        })
+    end,
     config = function()
         local cmp = require("cmp")
 
@@ -28,8 +36,8 @@ return {
             --     end,
             -- },
             window = {
-                -- completion = cmp.config.window.bordered(),
-                -- documentation = cmp.config.window.bordered(),
+                completion = cmp.config.window.bordered(),
+                documentation = cmp.config.window.bordered(),
             },
             mapping = cmp.mapping.preset.insert({
                 ["<C-b>"] = cmp.mapping.scroll_docs(-4),
