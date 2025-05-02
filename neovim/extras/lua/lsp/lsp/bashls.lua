@@ -1,6 +1,6 @@
-require("lspconfig").clangd.setup({
+require("lspconfig").bashls.setup({
     settings = {
-        clangd = {
+        bash_ls = {
             capabilities = require("cmp_nvim_lsp").default_capabilities()
         }
     }

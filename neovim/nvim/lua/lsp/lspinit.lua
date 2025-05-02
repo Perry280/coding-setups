@@ -26,13 +26,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end,
 })
 
--- vim.lsp.enable({
---     "luals",
---     "clangd"
--- })
-
-require("lsp.lsp_enable")({
+vim.lsp.enable({
     "lua_ls",
-    -- "clangd",
-    -- "pyright"
+    -- "clangd"
+    -- "pyright",
+    -- "bashls",
 })

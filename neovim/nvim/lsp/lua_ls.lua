@@ -1,4 +1,20 @@
-require("lspconfig").lua_ls.setup({
+return {
+    cmd = { "lua-language-server" },
+    filetypes = { "lua", },
+    root_markers = {
+        ".luarc.json",
+        ".luarc.jsonc",
+        ".luacheckrc",
+        ".stylua.toml",
+        "stylua.toml",
+        "selene.toml",
+        "selene.yml",
+        ".git"
+    },
+    capabilities = require("cmp_nvim_lsp").default_capabilities(),
+    settings = {
+        Lua = {},
+    },
     on_init = function(client)
         if client.workspace_folders then
             local path = client.workspace_folders[1].name
@@ -31,8 +47,6 @@ require("lspconfig").lua_ls.setup({
                 -- ),
                 -- library = vim.api.nvim_get_runtime_file("", true),
             },
-            capabilities = require("cmp_nvim_lsp").default_capabilities()
         })
     end,
-    settings = { Lua = {} }
-})
+}
