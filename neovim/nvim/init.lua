@@ -1,7 +1,4 @@
-require("setup.options")
-require("setup.keymaps")
-require("setup.terminal")
--- require("setup.windows")
+require("setup.setup")
 
 require("config.lazy")
 vim.cmd("colorscheme tokyonight-night")
