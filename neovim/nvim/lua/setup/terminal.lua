@@ -1,5 +1,5 @@
 vim.keymap.set("n", "<leader>tt", ":tabnew<CR>:terminal<CR>i")
-vim.keymap.set("n", "<leader>tb", ":split<CR><C-W>J:terminal<CR>i")
+vim.keymap.set("n", "<leader>tb", ":split<CR>:terminal<CR>i")
 
 vim.keymap.set("t", "<ESC>", "<C-\\><C-N>")
 vim.keymap.set("t", "<ESC><ESC>", "<C-\\><C-N>:bd!<CR>")

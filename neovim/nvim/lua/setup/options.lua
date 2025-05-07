@@ -20,5 +20,8 @@ vim.opt.incsearch = true
 
 vim.opt.scrolloff = 15
 
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
