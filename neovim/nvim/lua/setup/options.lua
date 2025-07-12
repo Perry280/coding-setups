@@ -18,6 +18,7 @@ vim.opt.signcolumn = "yes:1"
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
+vim.opt.mouse = "a"
 vim.opt.scrolloff = 15
 
 vim.opt.splitbelow = true
