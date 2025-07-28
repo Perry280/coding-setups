@@ -1,0 +1,62 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseExpressionOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLambdasOnASingleLine: None
+AllowShortLoopsOnASingleLine: true
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+    AfterCaseLabel: false
+    AfterClass: false
+    AfterControlStatement: Never
+    AfterEnum: false
+    AfterFunction: false
+    AfterNamespace: false
+    AfterObjCDeclaration: false
+    AfterStruct: false
+    AfterUnion: false
+    AfterExternBlock: false
+    BeforeCatch: true
+    BeforeElse: true
+    BeforeLambdaBody: false
+    BeforeWhile: false
+    IndentBraces: false
+    SplitEmptyFunction: false
+    SplitEmptyRecord: false
+    SplitEmptyNamespace: false
+
+PointerAlignment: Left
+ReferenceAlignment: Right
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+
+SpaceBeforeParens: Custom
+SpaceBeforeParensOptions:
+    AfterControlStatements: false
+    AfterForeachMacros: false
+    AfterFunctionDeclarationName: false
+    AfterFunctionDefinitionName: false
+    AfterIfMacros: false
+    AfterOverloadedOperator: false
+    AfterPlacementOperator: false
+    AfterRequiresInClause: false
+    AfterRequiresInExpression: false
+    BeforeNonEmptyParentheses: false
+
+SpaceBeforeRangeBasedForLoopColon: false
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesInAngles: Never
+SpacesInParens: Never
+SpacesInSquareBrackets: false
