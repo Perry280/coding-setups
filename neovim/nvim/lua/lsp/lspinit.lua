@@ -4,10 +4,10 @@ vim.diagnostic.config({
     update_in_insert = true,
 })
 
-local function keymaps(opts)
-    vim.keymap.set('i', '<C-Space>', '<C-x><C-o>', opts)
-    vim.keymap.set('i', '<C-S>', function() vim.lsp.buf.signature_help() end, opts)
-end
+-- local function keymaps(opts)
+--     vim.keymap.set('i', '<C-Space>', '<C-x><C-o>', opts)
+--     vim.keymap.set('i', '<C-S>', function() vim.lsp.buf.signature_help() end, opts)
+-- end
 
 vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(args)
@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         -- lsp_features.inlay_hints(args, client)
         -- lsp_features.tab_completion()
 
-        local opts = { buffer = args.buf };
+        -- local opts = { buffer = args.buf };
         -- keymaps(opts)
     end,
 })
