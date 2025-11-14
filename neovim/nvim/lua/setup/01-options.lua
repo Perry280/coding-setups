@@ -4,6 +4,8 @@ vim.opt.termguicolors = true
 vim.g.have_nerd_font = true
 
 vim.opt.clipboard = "unnamedplus"
+vim.opt.swapfile = false
+vim.opt.winborder = "rounded"
 
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
